@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(135deg, #d1c4e9, #f3e5f5); 
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    margin: 5px 0;
+    background-color: #e1bee7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#taskList li button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+
+.container.dark-mode {
+    background: linear-gradient(135deg, #333, #444); 
+    color: #f3f3f3; 
+}
+
+.dark-mode #taskList li {
+    background-color: #555; 
+    color: white;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+button[onclick="addTask()"] {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+button[onclick="addTask()"]:hover {
+    background-color: #45A049; 
+}
+
+
+button[onclick="toggleDarkMode()"] {
+    background-color: #2196F3; 
+    color: white;
+}
+
+button[onclick="toggleDarkMode()"]:hover {
+    background-color: #1976D2; 
+}
+
+
+#taskList button {
+    background-color: #f44336; 
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+#taskList button:hover {
+    background-color: #d32f2f; 
+}
+
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+h1, h2 {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+

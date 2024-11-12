@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pratikum js </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tambahkan SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Your To-Do List king</h1>
+        <input type="text" id="taskInput" placeholder="masukin list mu...">
+        <button onclick="addTask()">Add</button>
+        
+        <h2>Boleh di Custom king</h2>
+        <p>Pilih Warna Background:</p>
+        <select id="bgColor" onchange="changeBgColor()">
+            <option value="linear-gradient(135deg, #f3e5f5, #d1c4e9)">Purple Gradient</option>
+            <option value="linear-gradient(135deg, #a1c4fd, #c2e9fb)">Blue Gradient</option>
+            <option value="linear-gradient(135deg, #fbc2eb, #a6c1ee)">Pink Gradient</option>
+        </select>
+
+        <br><br>
+        <label>Change Font Size: 
+            <input type="range" id="fontSizeSlider" min="12" max="24" value="16" oninput="changeFontSize(this.value)">
+            <span id="fontSizeValue">16px</span>
+        </label>
+
+        <br><br>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+        <br><br>
+        <label>Change Font Style:
+            <select id="fontStyle" onchange="changeFontStyle()">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Times New Roman">Times New Roman</option>
+            </select>
+        </label>
+        
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
